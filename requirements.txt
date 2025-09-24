@@ -1,0 +1,9 @@
+# MCP Server Requirements
+mcp>=0.1.0
+fastmcp>=0.1.0
+
+# Python standard library extensions (usually pre-installed)
+# asyncio, pathlib, logging are part of standard library
+
+# Optional: For better async support
+aiofiles>=23.0.0
