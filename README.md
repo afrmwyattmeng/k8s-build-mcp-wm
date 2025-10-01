@@ -39,13 +39,13 @@ A Model Context Protocol (MCP) server for automated DevOps builds supporting Mus
 **Mustache Build Example:**
 ```
 Batch build mustache deployable for the following configuration:
-- dt_list: ["agent-portal-api", "agent_two"]
+- dt_list: ["agent-portal-api", "address"]
 ```
 
 **Helm Build Example:**
 ```
 Batch build helm deployable for the following configuration:
-- dt_list: ["agent-portal-api", "agent_two"]
+- dt_list: ["agent-portal-api", "address"]
 - region: "us-east-1" 
 - env_name: "stage-live"
 - cluster_name: "main"
@@ -102,5 +102,6 @@ cluster_name: "sandbox"
 env: "eu-north-1-prod-sandbox"
 ```
 *This Parameter relies on cursor understanding and splitting, which may lead to incorrect partitioning. It is still recommended to specify in the form of three parameters.*
+
 
 
