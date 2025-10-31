@@ -6,25 +6,23 @@ A Model Context Protocol (MCP) server for automated DevOps builds supporting Mus
 
 1. **Install dependencies**:
    ```bash
-   pip install -r requirements.txt
+   make setup
    ```
 
 2. **Configure Cursor IDE**:
-   Add to your Cursor settings JSON (replace {your_path} with your actual project directory):
+   Under your Cursor settings folder, usually $HOME/.cursor, create a file - mcp.json - with the following contents (replace the paths below with your setup)
    ```json
-   {
-     "mcp": {
-       "servers": {
-         "devops-build-server": {
-           "command": "python",
-           "args": ["{this_file_path}/MCP_build_version_1/server.py"],
-           "env": {
-             "ALL_THE_THINGS_ROOT": "{K8S_all_things_root}"
-           }
-         }
-       }
-     }
-   }
+  {
+    "mcpServers": {
+      "devops-build-server": {
+        "command": "/absolutepath/to/this/repo/venv/bin/python",
+        "args": ["/absolutepath/to/this/repo/server.py"],
+        "env": {
+          "ALL_THE_THINGS_ROOT": "/absolutepath/to/your/ATT/repo"
+        }
+      }
+    }
+  }
    ```
 
 3. **Restart Cursor IDE**
